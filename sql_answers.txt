@@ -1,0 +1,29 @@
+homework
+
+1-select name from products where on_sale = “f";
+2-select name from products where price < 20.00;
+3-select name,MAX(price) from products;
+4-select name, price from products limit 1 offset 1;
+5-select name,MIN(price) from products;
+6-select name, price from products order by price DESC;
+7-select AVG(price) from products;
+8-select SUM(price) from products;
+9-select SUM(price) from products where price < 20.00;
+10-select id from users where name = 'Jon Rogers’;
+11-select name from users where name LIKE ‘j%';
+12-select COUNT(name) from users where name LIKE ‘Spencer%';
+13-select COUNT(id) from wishlists where product_id = 1;
+14-select COUNT(id) from wishlists where user_id = 1;
+15-
+16-
+17-insert into users (created_at, name) values (time(),'Jonathan Anderson’);
+18-select id from users where name = 'Jonathan Anderson’;
+19-insert into wishlists (created_at, user_id, product_id) values (datetime(),15,4);
+20-update users set name = 'Jon Anderson' where name = 'Jonathan Anderson’;
+21-delete from users where name = 'Jon Anderson’;
+22-delete from wishlists where user_id  = 15;
+
+
+
+
+select name from products where id in (select product_id from wishlists);
